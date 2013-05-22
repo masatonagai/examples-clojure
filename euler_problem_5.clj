@@ -16,9 +16,10 @@
 (defn lcm [a, b]
   (/ (* a b) (gcd a b)))
 
+(assert (== 24 (lcm 12 8)))
+
 (defn llcm [coll]
   (loop [_coll coll]
-    (println _coll)
     (if (== 1 (.size _coll))
       (first _coll)
       (recur
